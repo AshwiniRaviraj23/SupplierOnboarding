@@ -64,7 +64,10 @@ Test
 |click on button       |SUBMIT|
 |wait for progress bar |
 |click on button       |Yes|
+|logout                                                                            |
+|tear down                                                                         |
 ***!
+
 
 
 

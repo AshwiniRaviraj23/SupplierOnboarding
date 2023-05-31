@@ -53,4 +53,7 @@ Test
 |populate field        |Trading hours           |with value         |12.12                     |
 |populate field        |Available for Emergency?                    |with  |Yes                |
 |click on button       |DISCARD|
+|logout                                                                            |
+|tear down                                                                         |
 ***!
+

@@ -22,4 +22,7 @@ Test
 |click on button          |REASSIGN                                                            |
 |click on button          |CANCEL                                                              |
 |click on link            |Return task to all assignees                                        |
+|logout                                                                            |
+|tear down                                                                         |
 ***!
+
