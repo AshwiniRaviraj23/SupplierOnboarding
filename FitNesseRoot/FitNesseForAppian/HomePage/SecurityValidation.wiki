@@ -1,0 +1,32 @@
+---
+Test
+---
+!***> FitNesse Configurations
+
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
+!path ${automated.testing.home}/**.jar
+*!
+
+!*** Initialization and Login to Tempo
+
+!| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+|setup with           |CHROME                       |browser                       |
+|set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
+|set appian version to|23.1                                                        |
+|set appian locale to |en_US                                                       |
+|login with username  |AshwiniR                                                    |
+***!
+
+!*** Field Validation
+
+!|Script                           |
+|Click on menu                     |HOME                            |
+|verify link                       |ADD NEW SUPPLIER                |is not present|
+|click on menu                     |SUPPLIERS                       |
+|click on grid|[1]                 |column                          |Task          |row   |[1] |
+|click on record related action    |Related Actions                 |
+|verify link                       |ACCREDIT SUPPLIER|is not present|
+|logout                                                                                        |
+|tear down                                                                                     |
+***!

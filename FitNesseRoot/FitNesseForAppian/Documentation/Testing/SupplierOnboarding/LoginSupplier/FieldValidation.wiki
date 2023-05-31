@@ -1,0 +1,56 @@
+---
+Help: integer and string validation
+Test
+---
+!***> FitNesse Configurations
+
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
+!path ${automated.testing.home}/**.jar
+*!
+
+!*** Initialization and Login to Tempo
+
+!| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+|setup with           |CHROME                       |browser                       |
+|set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
+|set appian version to|23.1                                                        |
+|set appian locale to |en_US                                                       |
+|login with username  |AshwiniRaviraj                                              |
+***!
+
+!*** validation for field
+!|script       |                                                                                                                                                                                                                                                                        
+|$a=           |get random string |201|  
+|$b=           |get random string |51|
+|$c=           |get random string |49|
+|click on link         |ADD NEW SUPPLIER                            |
+|populate field        |Entity Type             |with value         |Sole Trader               |
+|populate field        |Supplier Name           |with               |$a                        |                                                                                          
+|check not             |get field               |Supplier Name      |validation message        |The text cannot be longer than 200 characters, 201 characters received.|                                                               
+|wait for progress bar |                                                                                                           
+|populate field        |A.B.N                   |with value         |12 333 123 333            |
+|populate field        |E-mail                  |with value         |ashwinir@vuram.com        |
+|populate field        |Phone Number            |with value         |$b                        |
+|check not             |get field               |Phone Number       |validation message        |The text cannot be longer than 50 characters, 51 characters received.,please enter a valid phone number|
+|populate field        |Phone Number            |with value         |$c                        |
+|check                 |get field               |Phone Number       |validation message        |please enter a valid phone number|
+|populate field        |A.C.N                   |with value         |333 123 333               |
+|populate field        |Service Classification  |with value         |Goods                     |
+|populate field        |Association Type        |with value         |Incorporated              |
+|populate field        |Association Document    |with |C:\Users\ashwinir\Documents\AB.txt|
+|populate field        |Trading Name            |with value         |whiter                    |
+|wait for progress bar |
+|populate field        |Registered for GST?                         |with  |Yes                |
+|populate field        |Small Business?                             |with  |Yes                |
+|populate field        |Registered with supply nation?              |with  |Yes                |
+|populate field        |Require access to HP systems?               |with  |Yes                |
+|populate field        |Tax Payment Annual Report Exclusion?        |with  |Yes                |
+|click on radio option |Aboriginal|
+|populate field        |Regional Supplier?                          |with  |Yes                |
+|populate field        |Registered with ABD(WA)?                    |with  |Yes                |
+|populate field        |[20]                    |with value         |Pilbara                   |
+|populate field        |Trading hours           |with value         |12.12                     |
+|populate field        |Available for Emergency?                    |with  |Yes                |
+|click on button       |DISCARD|
+***!
