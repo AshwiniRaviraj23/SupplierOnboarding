@@ -20,7 +20,7 @@ Test
 ***!
 
 !*** Accredit Supplier 
-!| script                                                                            |
+!|script                                                                             |
 |click on menu                  |SUPPLIERS                                           |
 |wait for              |5       |seconds                                             |
 |click on grid|[1]              |column                         |Task      |row|[1]  |
@@ -29,6 +29,14 @@ Test
 |logout                                                                              |
 |tear down                                                                           |
 ***!
+
+!***> FitNesse Configurations
+
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
+!path ${automated.testing.home}/**.jar
+*!
+
 !*** Review the accredit task
 !| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture                    |
 |setup with           |CHROME                       |browser                                   |
@@ -51,13 +59,22 @@ Test
 |tear down                                                                                     |
 ***!
 
-!| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+!***> FitNesse Configurations
+
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
+!path ${automated.testing.home}/**.jar
+*!
+
+!*** Review home page task
+!|script              |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
 |setup with           |CHROME                       |browser                       |
 |set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
 |set appian version to|23.1                                                        |
 |set appian locale to |en_US                                                       |
 |login with username  |AshwiniR                                                    |
-|click on grid  |[1]                                   |column|[1]    |row    |[1] |
+!|script|
+|click on grid|[1]    |column                          |Task             |row|[1]  |
 |click on link        |Association document                                        |
 |wait for             |10                              |seconds                    |
 |click on button|NEXT                                                              |
@@ -70,6 +87,7 @@ Test
 |logout                                                                            |
 |tear down                                                                         |
 ***!
+
 
 
 

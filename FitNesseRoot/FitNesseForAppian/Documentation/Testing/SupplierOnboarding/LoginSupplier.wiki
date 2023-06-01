@@ -28,7 +28,7 @@ Test
 !| script                                                           |
 |click on link         |ADD NEW SUPPLIER                            |
 |populate field        |Entity Type             |with value         |Sole Trader               |
-|populate field        |Supplier Name           |With value         |supplier108               |
+|populate field        |Supplier Name           |With value         |supplier113               |
 |populate field        |A.B.N                   |with value         |12 333 123 333            |
 |populate field        |E-mail                  |with value         |ashwinir@vuram.com        |
 |populate field        |Phone Number            |with value         |9698799237                |
@@ -63,9 +63,10 @@ Test
 |populate field        |Work Number            |with value          |1234567898                |
 |click on button       |SUBMIT|
 |wait for progress bar |
+|wait for              |5     |seconds|
 |click on button       |Yes|
-|logout                                                                            |
-|tear down                                                                         |
+|logout                                                                                        |
+|tear down                                                                                     |
 ***!
 
 
