@@ -1,0 +1,68 @@
+---
+Test
+---
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
+!path ${automated.testing.home}/**.jar
+*!
+
+!*** Initialization and Login to Tempo
+
+!| script              |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+|setup with            |CHROME                       |browser                       |
+|set appian url to     |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding/page/reports|
+|set appian version to |23.1                                                        |
+|set appian locale to  |en_US                                                       |
+|set screenshot path to|C:\Users\ashwinir\Documents\Fitnesse POC\                   |
+|login with username   |AshwiniRaviraj                                              |
+***!
+
+!*** Click on all the tabs
+!|script                                                          |
+|click on pie chart|Supplier is segregated by Status|pie slice|[2]|
+|wait for	       |5	       |seconds                           |
+|click on pie chart|Supplier is segregated by Status|pie slice|[3]|
+|wait for	       |5	       |seconds                           |
+|take screenshot   |Screenshot2|   
+|logout                                                           |
+|tear down                                                        |
+***!
+
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
+!path ${automated.testing.home}/**.jar
+*!
+
+!*** Initialization and Login to Tempo
+
+!| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+|setup with           |CHROME                       |browser                       |
+|set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
+|set appian version to|23.1                                                        |
+|set appian locale to |en_US                                                       |
+|login with username  |AshwiniRaviraj                                              |
+***!
+!*** Click on all the tabs
+!| script                                                       |
+|click on menu                 |SUPPLIERS                       |
+***!
+
+!*** Sorting records
+!|script                                           |
+|sort record grid by column      |Supplier Name    |
+|wait for                        |5                |seconds    |
+|sort record grid by column      |Region           |
+|wait for                        |5                |seconds    |
+|click on record grid navigation |Next|
+***!
+
+!*** Search Filters
+!|script            |
+|populate field with placeholder |---Enter Supplier Name---|with               |Supplier            |
+|click on button                 |Search                                                            | 
+|wait for                        |5                        |seconds                                 |
+|populate record type user filter|status                   |with               |Active              | 
+|wait for                        |5                        |seconds                                 |
+|logout                                                                                             |
+|tear down                                                                                          |
+***!
