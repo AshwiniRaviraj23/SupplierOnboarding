@@ -5,7 +5,10 @@ Suite
 
 !note This page is automatically generated when running tests. It will be overwritten by the next Suite or Test execution.
 
-Tests failed (first failure was at 2023-05-31T19:50:49.546):
+Tests failed (first failure was at 2023-06-01T17:27:12.230):
 
 !see [[FitNesseForAppian.Documentation.Testing.SupplierOnboarding.AccreditSupplier][.FitNesseForAppian.Documentation.Testing.SupplierOnboarding.AccreditSupplier]]
 !see [[FitNesseForAppian.Documentation.Testing.SupplierOnboarding.AccreditSupplier.ReassignOption2][.FitNesseForAppian.Documentation.Testing.SupplierOnboarding.AccreditSupplier.ReassignOption2]]
+!see [[FitNesseForAppian.Documentation.Testing.SupplierOnboarding.LoginSupplier][.FitNesseForAppian.Documentation.Testing.SupplierOnboarding.LoginSupplier]]
+!see [[FitNesseForAppian.Documentation.Testing.SupplierOnboarding.LoginSupplier.FieldValidation][.FitNesseForAppian.Documentation.Testing.SupplierOnboarding.LoginSupplier.FieldValidation]]
+!see [[FitNesseForAppian.Documentation.Testing.SupplierOnboarding.SupplierSorting][.FitNesseForAppian.Documentation.Testing.SupplierOnboarding.SupplierSorting]]
