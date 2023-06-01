@@ -18,13 +18,13 @@ Test
 |login with username  |AshwiniRaviraj                                              |
 ***!
 !*** Click on all the tabs
-!| script                                                       |
+!|script                                                        |
 |click on menu                 |REPORTS                         |
 |Click on menu                 |HOME                            |
 ***!
 
 !*** Add New Supplier
-!| script                                                           |
+!|script                                                            |
 |click on link         |ADD NEW SUPPLIER                            |
 |populate field        |Entity Type             |with value         |Sole Trader               |
 |populate field        |Supplier Name           |With value         |supplier112               |
