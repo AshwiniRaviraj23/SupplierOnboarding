@@ -1,0 +1,155 @@
+---
+Test
+---
+!***> FitNesse Configurations
+
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
+!path ${automated.testing.home}/**.jar
+*!
+
+!*** Initialization and Login to Tempo
+
+!| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+|setup with           |CHROME                       |browser                       |
+|set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
+|set appian version to|23.1                                                        |
+|set appian locale to |en_US                                                       |
+|login with username  |AshwiniRaviraj                                              |
+***!
+!*** Click on all the tabs
+!| script                                                       |
+|click on menu                 |REPORTS                         |
+|Click on menu                 |HOME                            |
+***!
+
+!*** Add New Supplier
+!| script                                                           |
+|click on link         |ADD NEW SUPPLIER                            |
+|populate field        |Entity Type             |with value         |Sole Trader               |
+|populate field        |Supplier Name           |With value         |supplier112               |
+|populate field        |A.B.N                   |with value         |12 333 123 333            |
+|populate field        |E-mail                  |with value         |ashwinir@vuram.com        |
+|populate field        |Phone Number            |with value         |9698799237                |
+|populate field        |A.C.N                   |with value         |333 123 333               |
+|populate field        |Service Classification  |with value         |Goods                     |
+|populate field        |Association Type        |with value         |Incorporated              |
+|populate field        |Association Document    |with |C:\Users\ashwinir\Documents\AB.txt|
+|populate field        |Trading Name            |with value         |whiter                    |
+|wait for progress bar |
+|populate field        |Registered for GST?                         |with  |Yes                |
+|populate field        |Small Business?                             |with  |Yes                |
+|populate field        |Registered with supply nation?              |with  |Yes                |
+|populate field        |Require access to HP systems?               |with  |Yes                |
+|populate field        |Tax Payment Annual Report Exclusion?        |with  |Yes                |
+|click on radio option |Aboriginal|
+|populate field        |Regional Supplier?                          |with  |Yes                |
+|populate field        |Registered with ABD(WA)?                    |with  |Yes                |
+|populate field        |[20]                    |with value         |Pilbara                   |
+|populate field        |Trading hours           |with value         |12.12                     |
+|populate field        |Available for Emergency?                    |with  |Yes                |
+|click on button       |NEXT|
+|populate field        |Address Name[1]        |with value          |Chennai                   |
+|populate field        |Suburb                 |with value          |Urban                     |
+|populate field        |Address Type           |with value          |Branch                    |
+|populate field        |Address Line 1         |with value          |Chennai                   |
+|populate field        |Post Code              |with value          |620012                    |
+|populate field        |Contact First Name     |with value          |Demo                      |
+|populate field        |Role                   |with value          |Account Manager           |
+|populate field        |Email                  |with value          |ashwinir@vuram.com        |
+|populate field        |Address Name[2]        |with value          |Chennai                   |
+|populate field        |Mobile Number          |with value          |1234567898                |
+|populate field        |Work Number            |with value          |1234567898                |
+|click on button       |SUBMIT|
+|wait for progress bar |
+|wait for              |5     |seconds|
+|click on button       |Yes|
+|logout                                                                                        |
+|tear down                                                                                     |
+***!
+
+!***> FitNesse Configurations
+
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
+!path ${automated.testing.home}/**.jar
+*!
+
+!*** Initialization and Login to Tempo
+
+!| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+|setup with           |CHROME                       |browser                       |
+|set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
+|set appian version to|23.1                                                        |
+|set appian locale to |en_US                                                       |
+|login with username  |AshwiniRaviraj                                              |
+***!
+
+!*** Accredit Supplier 
+!|script                                                                             |
+|click on menu                  |SUPPLIERS                                           |
+|wait for              |5       |seconds                                             |
+|click on grid|[1]              |column                         |Task      |row|[1]  |
+|wait for working      |
+|click on button                |ACCREDIT SUPPLIER                                   |
+|logout                                                                              |
+|tear down                                                                           |
+***!
+
+!***> FitNesse Configurations
+
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
+!path ${automated.testing.home}/**.jar
+*!
+
+!*** Review the accredit task
+!| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture                    |
+|setup with           |CHROME                       |browser                                   |
+|set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding   |
+|set appian version to|23.1                                                                    |
+|set appian locale to |en_US                                                                   |
+|login with username  |AshwiniRaviraj                                                          |
+!| script|
+|click on grid            |[1]                                   |column|[1]    |row    |[1]   |
+|populate field           |Independent Contractor/Consultant?    |with  |Yes                   |
+|populate field           |Contractor/Consultant working         |with  |Project employee      |
+|populate field           |Australian Government Entity?         |with  |Yes                   |
+|populate field           |Accomodation Supplier?                |with  |YES                   |
+|populate field           |Review required?                      |with  |Yes                   |
+|populate field           |Select Reviewers                      |with  |Ashwini Reviewer      |
+|click on button          |NEXT                                                                |
+|click on button          |SUBMIT                                                              |
+|click on button          |Yes                                                                 |
+|logout                                                                                        |
+|tear down                                                                                     |
+***!
+
+!***> FitNesse Configurations
+
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
+!path ${automated.testing.home}/**.jar
+*!
+
+!*** Review home page task
+!|script              |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+|setup with           |CHROME                       |browser                       |
+|set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
+|set appian version to|23.1                                                        |
+|set appian locale to |en_US                                                       |
+|login with username  |AshwiniR                                                    |
+!|script|
+|click on grid|[1]    |column                          |Task             |row|[1]  |
+|click on link        |Association document                                        |
+|wait for             |10                              |seconds                    |
+|click on button|NEXT                                                              |
+|click on button|NEXT                                                              |
+|click on button|NEXT                                                              |
+|click on button|NEXT                                                              |
+|click on button|NEXT                                                              |
+|click on button|NEXT                                                              |
+|click on button|ACCREDIT                                                          |
+|logout                                                                            |
+|tear down                                                                         |
+***!
