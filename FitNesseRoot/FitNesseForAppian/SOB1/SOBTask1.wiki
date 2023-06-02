@@ -28,8 +28,11 @@ Test
 |click on link         |ADD NEW SUPPLIER                            |
 |populate field        |Entity Type             |with value         |Sole Trader               |
 |populate field        |Supplier Name           |With value         |supplier112               |
+|wait for              |5      |seconds|
 |populate field        |A.B.N                   |with value         |12 333 123 333            |
+|wait for              | 5     |seconds|
 |populate field        |E-mail                  |with value         |ashwinir@vuram.com        |
+|wait for              |5      |seconds|
 |populate field        |Phone Number            |with value         |9698799237                |
 |populate field        |A.C.N                   |with value         |333 123 333               |
 |populate field        |Service Classification  |with value         |Goods                     |
@@ -62,8 +65,9 @@ Test
 |populate field        |Work Number            |with value          |1234567898                |
 |click on button       |SUBMIT|
 |wait for progress bar |
-|wait for              |5     |seconds|
+|wait for              |10     |seconds|
 |click on button       |Yes|
+|wait for              |10     |seconds|
 |logout                                                                                        |
 |tear down                                                                                     |
 ***!
