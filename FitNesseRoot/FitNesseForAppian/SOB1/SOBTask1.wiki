@@ -64,7 +64,6 @@ Test
 |populate field        |Mobile Number          |with value          |1234567898                |
 |populate field        |Work Number            |with value          |1234567898                |
 |click on button       |SUBMIT|
-|wait for progress bar |
 |wait for              |10     |seconds|
 |click on button       |Yes|
 |wait for              |10     |seconds|
