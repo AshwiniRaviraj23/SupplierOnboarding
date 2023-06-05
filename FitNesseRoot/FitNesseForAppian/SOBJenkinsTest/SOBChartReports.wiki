@@ -16,7 +16,7 @@ Test
 |login with username  |AshwiniRaviraj                                              |
 ***!
 !*** Click on all the tabs
-!| script                                                       |
+!|script                                                        |
 |click on menu                 |SUPPLIERS                       |
 ***!
 
