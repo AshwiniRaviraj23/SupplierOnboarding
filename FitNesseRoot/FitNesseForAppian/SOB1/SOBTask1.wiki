@@ -30,7 +30,7 @@ Test
 |populate field        |Supplier Name           |With value         |supplier112               |
 |wait for              |5      |seconds|
 |populate field        |A.B.N                   |with value         |12 333 123 333            |
-|wait for              | 5     |seconds|
+|wait for              |5      |seconds|
 |populate field        |E-mail                  |with value         |ashwinir@vuram.com        |
 |wait for              |5      |seconds|
 |populate field        |Phone Number            |with value         |9698799237                |
