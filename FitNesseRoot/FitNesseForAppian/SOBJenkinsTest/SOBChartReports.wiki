@@ -30,7 +30,7 @@ Test
 ***!
 
 !*** Search Filters
-!|script            |
+!|script|
 |populate field with placeholder |---Enter Supplier Name---|with               |Supplier            |
 |click on button                 |Search                                                            | 
 |wait for                        |5                        |seconds                                 |
