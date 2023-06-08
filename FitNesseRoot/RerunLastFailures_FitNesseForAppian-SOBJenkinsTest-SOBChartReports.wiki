@@ -5,6 +5,6 @@ Suite
 
 !note This page is automatically generated when running tests. It will be overwritten by the next Suite or Test execution.
 
-Tests failed (first failure was at 2023-06-01T18:26:39.017):
+Tests failed (first failure was at 2023-06-08T13:13:34.369):
 
-!see [[FitNesseForAppian.Documentation.Testing.SupplierOnboarding.LoginSupplier][.FitNesseForAppian.Documentation.Testing.SupplierOnboarding.LoginSupplier]]
+!see [[FitNesseForAppian.SOBJenkinsTest.SOBChartReports][.FitNesseForAppian.SOBJenkinsTest.SOBChartReports]]

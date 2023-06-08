@@ -8,20 +8,20 @@ Test
 
 !*** Initialization and Login to Tempo
 
-!| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+!| script             |com.appiancorp.ps.automatedtest.fixture.SitesFixture        |
 |setup with           |CHROME                       |browser                       |
 |set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
-|set appian version to|23.1                                                        |
+|set appian version to|23.2                                                        |
 |set appian locale to |en_US                                                       |
 |login with username  |AshwiniRaviraj                                              |
 ***!
 !*** Click on all the tabs
-!|script                                                        |
-|click on menu                 |SUPPLIERS                       |
+!|script|
+|Click on menu                   |SUPPLIERS                       |
 ***!
 
 !*** Sorting records
-!|script                                           |
+!|script|
 |sort record grid by column      |Supplier Name    |
 |wait for                        |5                |seconds    |
 |sort record grid by column      |Region           |

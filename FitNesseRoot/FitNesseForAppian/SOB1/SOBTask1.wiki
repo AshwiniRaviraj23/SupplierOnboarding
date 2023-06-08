@@ -13,26 +13,23 @@ Test
 !| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
 |setup with           |CHROME                       |browser                       |
 |set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
-|set appian version to|23.1                                                        |
+|set appian version to|23.2                                                        |
 |set appian locale to |en_US                                                       |
 |login with username  |AshwiniRaviraj                                              |
 ***!
 !*** Click on all the tabs
-!|script                                                        |
+!| script                                                       |
 |click on menu                 |REPORTS                         |
 |Click on menu                 |HOME                            |
 ***!
 
 !*** Add New Supplier
-!|script                                                            |
+!| script                                                           |
 |click on link         |ADD NEW SUPPLIER                            |
 |populate field        |Entity Type             |with value         |Sole Trader               |
-|populate field        |Supplier Name           |With value         |supplier112               |
-|wait for              |5      |seconds|
+|populate field        |Supplier Name           |With value         |supplier232               |
 |populate field        |A.B.N                   |with value         |12 333 123 333            |
-|wait for              |5      |seconds|
 |populate field        |E-mail                  |with value         |ashwinir@vuram.com        |
-|wait for              |5      |seconds|
 |populate field        |Phone Number            |with value         |9698799237                |
 |populate field        |A.C.N                   |with value         |333 123 333               |
 |populate field        |Service Classification  |with value         |Goods                     |
@@ -64,9 +61,8 @@ Test
 |populate field        |Mobile Number          |with value          |1234567898                |
 |populate field        |Work Number            |with value          |1234567898                |
 |click on button       |SUBMIT|
-|wait for              |10     |seconds|
+|wait for progress bar |
 |click on button       |Yes|
-|wait for              |10     |seconds|
 |logout                                                                                        |
 |tear down                                                                                     |
 ***!

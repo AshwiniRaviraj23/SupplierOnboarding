@@ -2,7 +2,7 @@
 Help: Login as supplier and submit request
 Test
 ---
-!***> FitNesse Configurations
+<test page>!***> FitNesse Configurations
 
 !define TEST_SYSTEM {slim}
 !define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
@@ -11,21 +11,24 @@ Test
 
 !*** Initialization and Login to Tempo
 
-!| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
-|setup with           |CHROME                       |browser                       |
-|set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
-|set appian version to|23.1                                                        |
-|set appian locale to |en_US                                                       |
-|login with username  |AshwiniRaviraj                                              |
+!| script              |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+|setup with            |CHROME                       |browser                       |
+|set appian url to     |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding/page/reports|
+|set appian version to |23.2                                                        |
+|set appian locale to  |en_US                                                       |
+|set screenshot path to|C:\Users\ashwinir\Documents\Fitnesse POC\                   |
+|login with username   |AshwiniRaviraj                                              |
 ***!
+
+
 !*** Click on all the tabs
-!| script                                                       |
+!|script                                                        |
 |click on menu                 |REPORTS                         |
 |Click on menu                 |HOME                            |
 ***!
 
 !*** Add New Supplier
-!| script                                                           |
+!|script                                                            |
 |click on link         |ADD NEW SUPPLIER                            |
 |populate field        |Entity Type             |with value         |Sole Trader               |
 |populate field        |Supplier Name           |With value         |supplier120               |

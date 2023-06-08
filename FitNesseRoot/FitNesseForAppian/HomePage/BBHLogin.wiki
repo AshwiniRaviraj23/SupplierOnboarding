@@ -13,14 +13,14 @@ Test
 !| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
 |setup with           |CHROME                       |browser                       |
 |set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
-|set appian version to|23.1                                                        |
+|set appian version to|23.2                                                        |
 |set appian locale to |en_US                                                       |
 |login with username  |AshwiniRaviraj                                              |
 ***!
 !*** Click on all the tabs
-!| script                                                       |
+!|script|
 |click on menu                 |REPORTS                         |
-|Click on menu                 |HOME                            |
+|click on menu                 |HOME                            |
 ***!
 
 !*** Add New Supplier
