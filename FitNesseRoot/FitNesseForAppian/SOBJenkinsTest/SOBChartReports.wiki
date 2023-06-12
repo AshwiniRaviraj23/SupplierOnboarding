@@ -17,7 +17,7 @@ Test
 ***!
 
 !*** Sorting records
-!|script|
+!| script|
 |sort record grid by column      |Supplier Name    |
 |wait for                        |5                |seconds    |
 |sort record grid by column      |Region           |
@@ -26,7 +26,7 @@ Test
 ***!
 
 !*** Search Filters
-!|script|
+!| script|
 |populate field with placeholder |---Enter Supplier Name---|with               |Supplier            |
 |click on button                 |Search                                                            | 
 |wait for                        |5                        |seconds                                 |
