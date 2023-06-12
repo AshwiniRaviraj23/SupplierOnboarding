@@ -19,9 +19,9 @@ Test
 !*** Sorting records
 !|script|
 |sort record grid by column      |Supplier Name    |
-|wait for                        |5                |seconds    |
+|wait for                        |4                |seconds    |
 |sort record grid by column      |Region           |
-|wait for                        |5                |seconds    |
+|wait for                        |4                |seconds    |
 |click on record grid navigation |Next|
 ***!
 
