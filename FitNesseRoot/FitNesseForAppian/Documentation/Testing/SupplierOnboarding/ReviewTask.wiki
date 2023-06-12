@@ -76,7 +76,7 @@ Test
 !|script|
 |click on grid|[1]    |column                          |Task             |row|[1]  |
 |click on link        |Association document                                        |
-|wait for             |10                              |seconds                    |
+|wait for             |7                               |seconds                    |
 |click on button|NEXT                                                              |
 |click on button|NEXT                                                              |
 |click on button|NEXT                                                              |
