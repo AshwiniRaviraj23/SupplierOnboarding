@@ -10,17 +10,17 @@ Test
 
 !*** Initialization and Login to Tempo
 
-!| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+!|script              |com.appiancorp.ps.automatedtest.fixture.SitesFixture        |
 |setup with           |CHROME                       |browser                       |
 |set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
-|set appian version to|23.1                                                        |
+|set appian version to|23.2                                                        |
 |set appian locale to |en_US                                                       |
 |login with username  |AshwiniRaviraj                                              |
 ***!
 
 !*** Accredit Supplier 
 !|script                                                                             |
-|click on menu                  |SUPPLIERS                                           |
+|click on site page             |SUPPLIERS                                           |
 |wait for              |5       |seconds                                             |
 |click on grid|[1]              |column                         |Task      |row|[1]  |
 |wait for working      |
@@ -37,7 +37,7 @@ Test
 *!
 
 !*** Review the accredit task
-!| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture                    |
+!|script              |com.appiancorp.ps.automatedtest.fixture.SitesFixture                    |
 |setup with           |CHROME                       |browser                                   |
 |set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding   |
 |set appian version to|23.1                                                                    |
@@ -63,10 +63,10 @@ Test
 !define TEST_SYSTEM {slim}
 !define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
 !path ${automated.testing.home}/**.jar
-*!
+***!
 
 !*** Review home page task
-!|script              |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+!|script              |com.appiancorp.ps.automatedtest.fixture.SitesFixture        |
 |setup with           |CHROME                       |browser                       |
 |set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
 |set appian version to|23.1                                                        |
@@ -85,5 +85,5 @@ Test
 |click on button|ACCREDIT                                                          |
 |logout                                                                            |
 |tear down                                                                         |
-***!                                                                         |
-***!
+***!                                                                               |
+ 

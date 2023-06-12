@@ -10,7 +10,7 @@ Test
 
 !*** Initialization and Login to Tempo
 
-!| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+!|script              |com.appiancorp.ps.automatedtest.fixture.SitesFixture        |
 |setup with           |CHROME                       |browser                       |
 |set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
 |set appian version to|23.2                                                        |
@@ -21,7 +21,7 @@ Test
 !*** Field Validation
 
 !|Script                           |
-|Click on menu                     |HOME                            |
+|click on site page                |HOME                            |
 |verify link                       |ADD NEW SUPPLIER                |is not present|
 |click on menu                     |SUPPLIERS                       |
 |click on grid|[1]                 |column                          |Task          |row   |[1] |

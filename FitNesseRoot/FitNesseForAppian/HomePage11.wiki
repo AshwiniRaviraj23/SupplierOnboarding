@@ -1,18 +1,20 @@
 ---
 Test
 ---
----
 !define TEST_SYSTEM {slim}
-!define COMMAND_PATTERN {java -Dlog4j.debug -Dlog4j.configuration=file:\\\${automated.testing.home}\log4j.properties -cp %p %m}
+!define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
 !path ${automated.testing.home}/**.jar
-             
-!*** Initialization
-!| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture                                    |
-|setup with           |CHROME           |Browser                                                               |
-|set appian url to    |https://appiancoe.vuram.com/suite/sites/as_virtualwarehouse                             |
-|set appian version to|22.3                                                                                    |
-|set appian locale to |en_US                                                                                   |
-|login with username  |Aswin@1234                                                                              |
-|show                 |number of login attempts made                                                           |
-|click on menu        |TASK 
+*!
+
+!*** Initialization and Login to Tempo
+
+!| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+|setup with           |CHROME                       |browser                       |
+|set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding/page/suppliers|
+|set appian version to|23.2                                                        |
+|set appian locale to |en_US                                                       |
+|login with username  |AshwiniRaviraj                                              |
+|populate field|From date|with|06-06-2023|
+|populate field|To Date|with|06-13-2023|
+***!
 

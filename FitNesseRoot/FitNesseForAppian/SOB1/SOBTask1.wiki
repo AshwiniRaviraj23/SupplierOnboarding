@@ -10,7 +10,7 @@ Test
 
 !*** Initialization and Login to Tempo
 
-!|script              |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+!|script              |com.appiancorp.ps.automatedtest.fixture.SitesFixture        |
 |setup with           |CHROME                       |browser                       |
 |set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
 |set appian version to|23.2                                                        |
@@ -22,7 +22,7 @@ Test
 !|script                                                            |
 |click on link         |ADD NEW SUPPLIER                            |
 |populate field        |Entity Type             |with value         |Sole Trader               |
-|populate field        |Supplier Name           |With value         |supplier232               |
+|populate field        |Supplier Name           |With value         |supplier239               |
 |populate field        |A.B.N                   |with value         |12 333 123 333            |
 |populate field        |E-mail                  |with value         |ashwinir@vuram.com        |
 |populate field        |Phone Number            |with value         |9698799237                |

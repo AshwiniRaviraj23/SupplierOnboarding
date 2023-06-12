@@ -26,6 +26,6 @@ Test
 |click on pie chart|Supplier is segregated by Status|pie slice|[3]|
 |wait for	       |5	       |seconds                           |
 |take screenshot   |Screenshot2|   
-|logout                                                           |
-|tear down                                                        |
+|logout                                                                            |
+|tear down                                                                         |
 ***!

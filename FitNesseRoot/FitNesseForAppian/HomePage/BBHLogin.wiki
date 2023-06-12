@@ -10,7 +10,7 @@ Test
 
 !*** Initialization and Login to Tempo
 
-!| script             |com.appiancorp.ps.automatedtest.fixture.TempoFixture        |
+!|script              |com.appiancorp.ps.automatedtest.fixture.SitesFixture        |
 |setup with           |CHROME                       |browser                       |
 |set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
 |set appian version to|23.2                                                        |
@@ -19,18 +19,19 @@ Test
 ***!
 !*** Click on all the tabs
 !|script|
-|click on menu                 |REPORTS                         |
-|click on menu                 |HOME                            |
+|click on site page |REPORTS                         |
+|click on site page |HOME                            |
 ***!
 
 !*** Add New Supplier
-!| script                                                           |
+!|script                                                            |
 |click on link         |ADD NEW SUPPLIER                            |
 |populate field        |Entity Type             |with value         |Sole Trader               |
-|populate field        |Supplier Name           |With value         |supplier120               |
+|populate field        |Supplier Name           |With value         |JUNE01                    |
 |populate field        |A.B.N                   |with value         |12 333 123 333            |
 |populate field        |E-mail                  |with value         |ashwinir@vuram.com        |
 |populate field        |Phone Number            |with value         |9698799237                |
+|wait for              |5                       |seconds                                       |
 |populate field        |A.C.N                   |with value         |333 123 333               |
 |populate field        |Service Classification  |with value         |Goods                     |
 |populate field        |Association Type        |with value         |Incorporated              |
@@ -63,6 +64,7 @@ Test
 |click on button       |SUBMIT|
 |wait for progress bar |
 |click on button       |Yes|
+|wait for              |5       |seconds                                                       |
 |logout                                                                                        |
 |tear down                                                                                     |
 ***!
