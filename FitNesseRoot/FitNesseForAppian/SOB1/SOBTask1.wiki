@@ -10,12 +10,12 @@ Test
 
 !*** Initialization and Login to Tempo
 
-!|script              |com.appiancorp.ps.automatedtest.fixture.SitesFixture        |
-|setup with           |CHROME                       |browser                       |
+!|script              |com.appiancorp.ps.automatedtest.fixture.SitesFixture                 |
+|setup with           |CHROME                       |browser                                |
 |set appian url to    |https://appiancoe.vuram.com/suite/sites/d2207kuso-supplier-onboarding|
-|set appian version to|23.2                                                        |
-|set appian locale to |en_US                                                       |
-|login with username  |AshwiniRaviraj                                              |
+|set appian version to|23.2                                                                 |
+|set appian locale to |en_US                                                                |
+|login with username  |AshwiniRaviraj                                                       |
 ***!
 
 !*** Add New Supplier
