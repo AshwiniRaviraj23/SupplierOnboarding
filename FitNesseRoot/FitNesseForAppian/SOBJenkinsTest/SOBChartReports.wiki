@@ -29,9 +29,9 @@ Test
 !|script|
 |populate field with placeholder |---Enter Supplier Name---|with               |Supplier            |
 |click on button                 |Search                                                            | 
-|wait for                        |5                        |seconds                                 |
+|wait for                        |4                        |seconds                                 |
 |populate record type user filter|status                   |with               |Active              | 
-|wait for                        |5                        |seconds                                 |
+|wait for                        |4                        |seconds                                 |
 |logout                                                                                             |
 |tear down                                                                                          |
 ***!
