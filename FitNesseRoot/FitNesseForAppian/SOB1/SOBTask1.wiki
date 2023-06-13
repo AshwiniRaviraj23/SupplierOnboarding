@@ -28,6 +28,7 @@ Test
 |populate field        |Phone Number            |with value         |9698799237                |
 |wait for	           |5	                    |seconds                                       |
 |populate field        |A.C.N                   |with value         |333 123 333               |
+|wait for	           |5	                    |seconds                                       |
 |populate field        |Service Classification  |with value         |Goods                     |
 |populate field        |Association Type        |with value         |Incorporated              |
 |populate field        |Association Document    |with |C:\Users\ashwinir\Documents\AB.txt|
@@ -65,4 +66,5 @@ Test
 |logout                                                                                        |
 |tear down                                                                                     |
 ***!
+
 
